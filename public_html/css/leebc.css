@@ -14,9 +14,25 @@ and open the template in the editor.
 }
 .login{
     color: blue;
-    text-align: right;
-    vertical-align: text-top;
+    display:inline-block;
+    float: right;
 }
+.homepage-image{
+    float: left;
+}
+.front-page-images{
+   /* float: left;
+    margin:0px;
+    padding:0px;
+    width:25%;
+    border-style: solid;
+    border-width: 1px;*/
+    margin: 0 auto;
+    width: 33%;
+    text-align:center;
+    white-space: nowrap;
+}
+
 .full-width-tabs > ul.nav.nav-tabs {
     display: table;
     width: 100%;
@@ -58,6 +74,11 @@ and open the template in the editor.
     position: relative;
     top: -1px;
     *overflow: hidden;
+}
+
+.form-center{
+    margin:0 auto;
+    width: 80%;
 }
 
 #FB-Button{

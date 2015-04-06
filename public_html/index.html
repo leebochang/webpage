@@ -13,24 +13,20 @@ and open the template in the editor.
         <script src="js/bootstrap.js"></script>
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="css/leebc.css">
-        <script>
-            $('.row .btn').on('click', function(e) {
-            e.preventDefault();
-            var $this = $(this);
-            var $collapse = $this.closest('.collapse-group').find('.collapse');
-            $collapse.collapse('toggle');
-            });
-        </script>
+
     </head>
     <body>
         <div class="page-header" align="center" style="background-color: black; overflow: hidden;" > 
             <h1 style="color: white; "> THIS IS NOT A REAL WEBSITE THIS IS A PROJECT FOR CS 648</h1>
         </div>
         <!-- logo divider -->
-        <div class = "p-logo">
+        <div class = "p-logo container-fluid ">
+        <div class="homepage-image">
             <img src="./img/paw_print.jpeg" alt="Paw Print" style="width:150px;height:75px">
             www.pawpi.com
-            <button type="button" class="btn pull-right btn-link" data-toggle="modal" data-target="#registerModal">
+        </div>
+        <div class="login container">
+            <button type="button" class="btn pull-right btn-link btn-large" data-toggle="modal" data-target="#registerModal">
                 register
             </button>
         <!-- Register Modal -->
@@ -43,27 +39,22 @@ and open the template in the editor.
             </button>
             <h4 class="modal-title text-center">www.pawpi.com</h4>
         </div>
-        <div class="modal-body">
+        <div class="modal-body container-fluid">
         <!-- The form is placed inside the body of modal -->
         <form action="" method="post">
-        <label id="mylabel"> Username </label>
+        <label class ="form-center" id="mylabel"> Username </label>
         <input type="text"/>
-        <label id="mylabel"> Email </label>
+        <label class ="form-center" id="mylabel"> Email </label>
         <input type="text"/>        
-        <label id="mylabel"> Password </label>
+        <label class ="form-center" id="mylabel"> Password </label>
         <input type="password"/>
-        <div class="row">
-        <div class="span4 collapse-group">
+        <div class="collapse-group">
             <p class="collapse"id="viewdetails">
-            <label id="mylabel"> Email </label>
+            <label class ="form-center" id="mylabel"> Email </label>
             <input type="text"/>
-            <label id="mylabel"> Email </label>
+            <label class ="form-center" id="mylabel"> Email </label>
             <input type="text"/>
-            </p>
-            <!--<label id="expand-link"><a class="btn btn-link" href="#">Are you registering for a shelter? click here &raquo;</a></label>
-            -->
-            <p><a class="btn btn-link" data-toggle="collapse" data-target="#viewdetails">View details &raquo;</a>
-        </div>
+            </p><a class="btn btn-link" data-toggle="collapse" data-target="#viewdetails">Registering For A Shelter? &raquo;</a>
         </div>
         </form>
         <div class ="check-reminder">
@@ -80,9 +71,10 @@ and open the template in the editor.
         </div>
         <!-- End of Register Modal -->
             <span class="btn-separator"></span>
-            <button type="button" class="btn pull-right btn-link" data-toggle="modal" data-target="#loginModal">
+            <button type="button" class="btn pull-right btn-link btn-large" data-toggle="modal" data-target="#loginModal">
                 login
             </button>
+        </div>
         <!-- Login Modal -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
         <div class="modal-dialog">
@@ -116,7 +108,7 @@ and open the template in the editor.
         </div>
         <!-- End of Login Modal -->
         <br>
-            <div class="text-right text-info">login with:
+            <div class="container login text-right">login with:
             <input type="submit" id="FB-Button" name="submit" value="">
             <input type="submit" id="TW-Button" name="submit" value="">
             <input type="submit" id="GP-Button" name="submit" value="">
@@ -145,6 +137,25 @@ and open the template in the editor.
             </ul>
         </div>
         </div>
-        </nav>
+        </nav> 
+        <!-- end of navigation bar-->
+        <div class="container">
+        <div class="span9" style="background-color: white;">
+        <div class="table">
+        <div class="front-page-images span3">
+            Adopt Fredo!
+            <img class="span3" src="./img/my-dog.jpg" alt=" ">
+        </div>
+        <div class="front-page-images span3">
+            Adopt Max!
+            <img class="span3" src="./img/my-dog.jpg" alt=" " >
+        </div>
+        <div class="front-page-images span3">
+            Adopt Tony!
+            <img class="span3" src="./img/my-dog.jpg" alt=" " >
+        </div>
+        </div>
+        </div>
+        </div>
     </body>
 </html>
