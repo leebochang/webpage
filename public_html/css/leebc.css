@@ -20,17 +20,61 @@ and open the template in the editor.
 .homepage-image{
     float: left;
 }
-.front-page-images{
-   /* float: left;
-    margin:0px;
-    padding:0px;
-    width:25%;
+
+.front-page-img{
+    display:block;
+    margin:auto;
+    text-align: center;
+    font-size: 36px;
+    position: relative;
     border-style: solid;
-    border-width: 1px;*/
-    margin: 0 auto;
+    border-width: 0px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    color:white;
+}
+.row-border{
+    
+    border-style: solid;
+    border-color: black;
+    border-width: 0px;
+    background-color:black;
+}
+
+.column-left{ 
+    float: left; 
+    display: inline-block;
     width: 33%;
-    text-align:center;
-    white-space: nowrap;
+    vertical-align: top;
+}
+.column-right{ 
+    float: right; 
+    display: inline-block;
+    width: 33%; 
+    vertical-align: top;
+}
+.column-center{ 
+    display: inline-block; 
+    width: 33%; 
+    vertical-align: top;
+}
+.column-search{
+    padding-top: 30px;
+    vertical-align: top;
+    width: 100%;
+    display: inline-block;
+}
+
+#search-size{
+}
+.horizontal-divider{
+    height: 10px;
+    width:100%;
+    display:block; /* for use on default inline elements like span */
+    
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: black;
 }
 
 .full-width-tabs > ul.nav.nav-tabs {
@@ -139,4 +183,86 @@ and open the template in the editor.
 #expand-link{
     text-align:center;
     margin: 0 auto;
+}
+#search_form {
+    background: #2d93cc; 
+    position: relative; 
+    padding: 10px 190px 10px 10px; 
+    border: 3px solid #ffffff; 
+    -webkit-border-radius: 10px; 
+    -moz-border-radius: 10px; 
+    -o-border-radius: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
+    -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+#search_text {
+    font-size: 20px; color: #5e5e5e; float: left; 
+    width: 100%; height: 30px; margin: 0; 
+    padding: 5px 10px 5px 10px; border: none; 
+    webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    border-radius: 5px; 
+    box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.5); 
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.5); 
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+#search_text:focus {
+    background: #ecf5fd;
+}
+
+#search_button {
+    background: #da3a4a; 
+    background: -moz-linear-gradient(top, #da3a4a 0%, #bd2b39 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#da3a4a), color-stop(100%,#bd2b39)); 
+    background: -webkit-linear-gradient(top, #da3a4a 0%,#bd2b39 100%); 
+    background: -o-linear-gradient(top, #da3a4a 0%,#bd2b39 100%); 
+    background: -ms-linear-gradient(top, #da3a4a 0%,#bd2b39 100%); 
+    background: linear-gradient(top, #da3a4a 0%,#bd2b39 100%); 
+    font-size: 20px; line-height: 40px; color: #ffffff; 
+    text-shadow: 0px 1px 1px #641010; float: right; 
+    width: 150px; 
+    height: 40px; 
+    margin: 0 -180px 0 0; 
+    padding: 0; 
+    border: 1px solid #e03c4c; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    border-radius: 5px; 
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); 
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);}
+
+#search_button:hover {
+    background: #e03c4c; cursor: pointer;
+}
+
+/***Clear floats***/
+.clearfix:before, .clearfix:after {
+    content: ""; display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+/***Form adjustments for the small screen***/
+@media screen and (max-width: 799px), screen and (max-width: 768px) and (orientation: portrait) {
+
+	body {padding: 20px;}
+
+	#search_form {padding: 10px 120px 10px 10px;}
+
+	#search_text {font-size: 16px; height: 20px;}
+	
+	#search_button {font-size: 16px; line-height: 30px; width: 80px; height: 30px; margin: 0 -110px 0 0;}
+
 }

@@ -13,7 +13,7 @@ and open the template in the editor.
         <script src="js/bootstrap.js"></script>
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="css/leebc.css">
-
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css">
     </head>
     <body>
         <div class="page-header" align="center" style="background-color: black; overflow: hidden;" > 
@@ -140,22 +140,38 @@ and open the template in the editor.
         </nav> 
         <!-- end of navigation bar-->
         <div class="container">
-        <div class="span9" style="background-color: white;">
-        <div class="table">
-        <div class="front-page-images span3">
-            Adopt Fredo!
-            <img class="span3" src="./img/my-dog.jpg" alt=" ">
-        </div>
-        <div class="front-page-images span3">
-            Adopt Max!
-            <img class="span3" src="./img/my-dog.jpg" alt=" " >
-        </div>
-        <div class="front-page-images span3">
-            Adopt Tony!
-            <img class="span3" src="./img/my-dog.jpg" alt=" " >
+        <div class="row-fluid">
+        <div class="row-border">
+        <div class="column-left">
+        <div class="front-page-img">
+            <p>Adopt Max!</p>
+            <img src="./img/my-dog.jpg" alt="Paw Print" style="width:250px;height:125px">                
         </div>
         </div>
+        <div class="column-center">
+        <div class="front-page-img">
+            <p>Adopt Max!</p>
+            <img src="./img/my-dog.jpg" alt="Paw Print" style="width:250px;height:125px">            
         </div>
         </div>
+        <div class="column-right">
+        <div class="front-page-img">
+            <p>Adopt Max!</p>
+            <img src="./img/my-dog.jpg" alt="Paw Print" style="width:250px;height:125px">                
+        </div>
+        </div>
+        </div>            
+        </div>
+        </div>
+        <!-- end of endangered pets -->
+	<div class="row">
+        <div class="column-search">
+        <form action="#" method="post" id="search_form" class="clearfix">
+	<input type="text" size="40" maxlength="150" name="search_text" placeholder="search for a pet" id="search_text" />
+	<input type="submit" name="search" value="Search" id="search_button" />
+</form>
+        </div>
+        </div>
+        <div class="horizontal-divider"></div>
     </body>
 </html>
