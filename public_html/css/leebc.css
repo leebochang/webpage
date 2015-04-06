@@ -14,6 +14,8 @@ and open the template in the editor.
 }
 .login{
     color: blue;
+    text-align: right;
+    vertical-align: text-top;
 }
 .full-width-tabs > ul.nav.nav-tabs {
     display: table;
@@ -29,4 +31,91 @@ and open the template in the editor.
 }
 .take-all-space-you-can{
     width:100%;
+}
+.btn-separator:after {
+    content: ' ';
+    display: block;
+    float: right;
+    background: #ADADAD;
+    margin: 0 10px;
+    height: 34px;
+    width: 1px;
+}
+.check-reminder{
+    color: black;
+}
+.check-reminder > label{
+    display: block;
+    padding-left: 145px; //  15px
+    text-indent: -15px; // -15px
+}
+.check-reminder > label > input{
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+#FB-Button{
+    background:url(../img/facebook.jpg) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:50px;
+    height:50px;
+    background-size: 100%;
+}
+#TW-Button{
+    background:url(../img/twitter.jpg) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:50px;
+    height:50px;
+    background-size: 100%;
+}
+#GP-Button{
+    background:url(../img/google.jpg);
+    background-repeat: no-repeat;
+    border:none;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-size: 100%;
+}
+
+#myform {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#mylabel, #myinput {
+    /* in order to define widths */
+    display: inline-block;
+}
+
+#mylabel {
+    width: 30%;
+    /* positions the label text beside the input */
+    text-align: right;
+}
+
+#mylabel + #myinput {
+    width: 30%;
+    /* large margin-right to force the next element to the new-line
+       and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+}
+
+/* only the submit button is matched by this selector,
+   but to be sure you could use an id or class for that button */
+#myinput + #myinput {
+    float: right;
+}
+
+#expand-link{
+    text-align:center;
+    margin: 0 auto;
 }

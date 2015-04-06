@@ -13,41 +13,138 @@ and open the template in the editor.
         <script src="js/bootstrap.js"></script>
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="css/leebc.css">
+        <script>
+            $('.row .btn').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $collapse = $this.closest('.collapse-group').find('.collapse');
+            $collapse.collapse('toggle');
+            });
+        </script>
     </head>
     <body>
-    <div class="page-header" align="center" style="background-color: black; overflow: hidden;" > 
-        <h1 style="color: white; "> THIS IS NOT A REAL WEBSITE THIS IS A PROJECT FOR CS 648
-        </h1>
-    </div>
-    <div class = "p-logo">
-        <img src="./images/paw_print.jpeg" alt="Paw Print" style="width:150px;height:75px">
-        www.pawpi.com
-        <div class="login">
-            login
+        <div class="page-header" align="center" style="background-color: black; overflow: hidden;" > 
+            <h1 style="color: white; "> THIS IS NOT A REAL WEBSITE THIS IS A PROJECT FOR CS 648</h1>
         </div>
-    </div>
-    <nav class="navbar navbar-inner">
-    <div class="container">
-    <div class="tabbable full-width-tabs">
-        <ul class="nav nav-tabs">
-        <li class="active take-all-space-you-can"><a href="#">Home</a></li>
- 
-        <li class = "take-all-space-you-can"><a href="./DonatePet.html">Donate A Pet</a></li> 
-        <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account
-        <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-        <li class="take-all-space-you-can"><a href="#">My Inbox</a></li>
-        <li class="take-all-space-you-can"><a href="#">My Listings</a></li>
-        <li class="take-all-space-you-can"><a href="#">My Profile</a></li>
-        <li class="take-all-space-you-can"><a href="#">My Favorites</a></li> 
-        </ul>
-        </li>
-        <li class = "take-all-space-you-can"><a href="#">About Us</a></li> 
-        </ul>
-    </div>
-    </div>
-    </nav>
+        <!-- logo divider -->
+        <div class = "p-logo">
+            <img src="./img/paw_print.jpeg" alt="Paw Print" style="width:150px;height:75px">
+            www.pawpi.com
+            <button type="button" class="btn pull-right btn-link" data-toggle="modal" data-target="#registerModal">
+                register
+            </button>
+        <!-- Register Modal -->
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="Register" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title text-center">www.pawpi.com</h4>
+        </div>
+        <div class="modal-body">
+        <!-- The form is placed inside the body of modal -->
+        <form action="" method="post">
+        <label id="mylabel"> Username </label>
+        <input type="text"/>
+        <label id="mylabel"> Email </label>
+        <input type="text"/>        
+        <label id="mylabel"> Password </label>
+        <input type="password"/>
+        <div class="row">
+        <div class="span4 collapse-group">
+            <p class="collapse"id="viewdetails">
+            <label id="mylabel"> Email </label>
+            <input type="text"/>
+            <label id="mylabel"> Email </label>
+            <input type="text"/>
+            </p>
+            <!--<label id="expand-link"><a class="btn btn-link" href="#">Are you registering for a shelter? click here &raquo;</a></label>
+            -->
+            <p><a class="btn btn-link" data-toggle="collapse" data-target="#viewdetails">View details &raquo;</a>
+        </div>
+        </div>
+        </form>
+        <div class ="check-reminder">
+            <label><input type="checkbox" /> Accept Terms & Conditions</label>
+        </div>
+        <div class="form-group">
+        <div class="col-xs-5 col-xs-offset-3">
+            <button type="submit" class="btn btn-block btn-primary">Register!</button>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- End of Register Modal -->
+            <span class="btn-separator"></span>
+            <button type="button" class="btn pull-right btn-link" data-toggle="modal" data-target="#loginModal">
+                login
+            </button>
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title text-center">www.pawpi.com</h4>
+        </div>
+        <div class="modal-body">
+        <!-- The form is placed inside the body of modal -->
+        <form id="loginForm" method="post" class="form-horizontal">
+        <form action="" method="post">
+        <label id="mylabel"> Username </label>
+        <input type="text"/>
+        <label id="mylabel"> Password </label>
+        <input type="password"/>
+        <div class ="check-reminder">
+            <label><input type="checkbox" /> Remember Me!</label>
+        </div>
+        <div class="form-group">
+        <div class="col-xs-5 col-xs-offset-3">
+            <button type="submit" class="btn btn-block btn-primary">Login!</button>
+        </div>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- End of Login Modal -->
+        <br>
+            <div class="text-right text-info">login with:
+            <input type="submit" id="FB-Button" name="submit" value="">
+            <input type="submit" id="TW-Button" name="submit" value="">
+            <input type="submit" id="GP-Button" name="submit" value="">
+            </div>
+        </div>
+        <div><br></div>
+        <!-- End of logo divider -->
+        <nav class="navbar navbar-inner">
+        <div class="container">
+        <div class="tabbable full-width-tabs">
+            <ul class="nav nav-tabs">
+            <li class="active take-all-space-you-can"><a href="./index.html">Home</a></li>
+            <li class = "take-all-space-you-can"><a href="./DonatePet.html">Donate A Pet</a></li> 
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account
+            <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+            <li class="take-all-space-you-can"><a href="#">My Inbox</a></li>
+            <li class="take-all-space-you-can"><a href="#">My Listings</a></li>
+            <li class="take-all-space-you-can"><a href="#">My Profile</a></li>
+            <li class="take-all-space-you-can"><a href="#">My Favorites</a></li> 
+            </ul>
+            </li>
+            <li class = "take-all-space-you-can"><a href="#">About Us</a></li> 
+            </ul>
+        </div>
+        </div>
+        </nav>
     </body>
 </html>
